@@ -6,6 +6,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { ImCancelCircle } from 'react-icons/im';
 import { selectDarkMode } from '../features/darkMode/darkModeSlice';
 import { HiOutlineDocumentDownload } from 'react-icons/hi';
+import resume  from '../data/resume.pdf';
 
 export default function Header({headerOpen}) {
     const [showHeader, setShowHearder] = useState(headerOpen);
@@ -44,8 +45,8 @@ export default function Header({headerOpen}) {
                             <a href='#projects'><li className={hoverStyle}>{language.headline_projects}</li></a>
                             <a href='#contact'><li className={hoverStyle}>{language.headline_contact}</li></a>
                         </ul>
-                        {/* dwn resume */}
-                        <a href="https://docs.google.com/document/d/1NbeITx4qxwpff3qeD1K0o3gFT26N3J8a/edit?usp=sharing&ouid=113318349208151645885&rtpof=true&sd=true">
+                        {/* resume */}
+                        <a href={resume} target='_blank' rel="noreferrer">
                             <div className={`${hoverStyle} border-2 px-5 py-3 rounded-xl hover:border-blue-500 flex gap-1 text-center`}>{language.headline_resume} <span className='text-3xl'><HiOutlineDocumentDownload/></span></div>
                         </a>
                     </div>
