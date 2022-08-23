@@ -1,0 +1,42 @@
+[
+    {
+        "prj_id": 1,
+        "name": "sort algorithm visualiser",
+        "description": "This project is built to help visualize the sorting logic of various sorting algorithms and improve the understanding through visuals."
+    },
+    {
+        "prj_id": 2,
+        "name": "path search visualiser",
+        "description": "This project is built to help visualize how various path searching algorithms try to find the shortest path from the start node to the target node in the graph."
+    },
+    {
+        "prj_id": 3,
+        "name": "vidtalkie",
+        "description": "Web application, a clone of one of the most used applications, demonstrates the basic functionalities such as login using google authentication, profile pages, uploading videos, liking videos, commenting, searching, and filtering videos and accounts."
+    },
+    {
+        "prj_id": 4,
+        "name": "grocery store manager",
+        "description": "The application is a simulation of the grocery store manager. It loads data from the file or manual entering and checks if the data are valid and in the range of valid numbers, if they are not manual entering is required. The program reads the product id and the quantity to add them to the current purchase cart. After items are selected, the program prints the summary of the current purchase with tax and total information. When the program is shut down, it generates the 'End of day summary', where it indicates the total cost of sold items, number of sales, and average items per sale as well as a summary of stock left and the ranks of top sellers in each category."
+    },
+    {
+        "prj_id": 5,
+        "name": "math game",
+        "description": "The game application built using C for having fun and challenging your math skills."
+    },
+    {
+        "prj_id": 6,
+        "name": "company web app",
+        "description": "Web Application built to demonstrate how to login into the system, retrieve current employee and department data, add, delete, and edit the current data inside the company database."
+    },
+    {
+        "prj_id": 7,
+        "name": "general hospital pre-trial application",
+        "description": "A program for hospitals to help them with sorting their patients. It sorts the patient according to the need of the Covid test. The program assigns the type of patience depending on if the covid test is needed. Depending on the group, a patient has to enter the data for a doctor. After that, the ticket is given with the expected time of waiting, the number in the line."
+    },
+    {
+        "prj_id": 8,
+        "name": "assembly line simulation",
+        "description": "Simulation of an assembly that consists of a set of workstations each of which holds a set of stock items, which are specific to the station. A line manager moves customer orders along the line filling the orders at each station, as requested. Each customer order consists of a list of items that need to be filled. Each station processes a queue of orders by filling the next order in the queue if that order requests the station's item and that item is in stock. The line manager keeps moving the customer orders from station to station until all orders have been processed."
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "prj_id": 1,
+        "name": "visualizador de algoritmo de clasificación",
+        "description": "Este proyecto está diseñado para ayudar a visualizar la lógica de clasificación de varios algoritmos de clasificación y mejorar la comprensión a través de imágenes."
+    },
+    {
+        "prj_id": 2,
+        "name": "visualizador de búsqueda de rutas",
+        "description": "Este proyecto está diseñado para ayudar a visualizar cómo varios algoritmos de búsqueda de rutas intentan encontrar la ruta más corta desde el nodo de inicio hasta el nodo de destino en el gráfico."
+    },
+    {
+        "prj_id": 3,
+        "name": "vidtalkie",
+        "description": "La aplicación web, un clon de una de las aplicaciones más utilizadas, demuestra las funcionalidades básicas, como iniciar sesión con la autenticación de Google, páginas de perfil, cargar videos, dar me gusta a los videos, comentar, buscar y filtrar videos y cuentas."
+    },
+    {
+        "prj_id": 4,
+        "name": "gerente de tienda de comestibles",
+        "description": "La aplicación es una simulación del gerente de una tienda de comestibles. Carga datos del archivo o ingreso manual y verifica si los datos son válidos y están dentro del rango de números válidos, si no es necesario ingresarlos manualmente. El programa lee el id del producto y la cantidad para agregarlos al carrito de compra actual. Después de seleccionar los artículos, el programa imprime el resumen de la compra actual con información de impuestos y total. Cuando el programa se cierra, genera el 'Resumen al final del día', donde indica el costo total de los artículos vendidos, el número de ventas y el promedio de artículos por venta, así como un resumen de las existencias restantes y los rangos de los mejores vendedores. en cada categoría."
+    },
+    {
+        "prj_id": 5,
+        "name": "juego de matemáticas",
+        "description": "La aplicación de juego creada con C para divertirse y desafiar sus habilidades matemáticas."
+    },
+    {
+        "prj_id": 6,
+        "name": "aplicación web de la empresa",
+        "description": "Aplicación web creada para demostrar cómo iniciar sesión en el sistema, recuperar datos actuales de empleados y departamentos, agregar, eliminar y editar los datos actuales dentro de la base de datos de la empresa."
+    },
+    {
+        "prj_id": 7,
+        "name": "solicitud previa al juicio del hospital general",
+        "description": "Un programa para hospitales para ayudarlos a clasificar a sus pacientes. Clasifica al paciente según la necesidad de la prueba de Covid. El programa asigna el tipo de paciencia dependiendo de si se necesita la prueba de covid. Dependiendo del grupo, un el paciente tiene que ingresar los datos de un médico. Después de eso, se entrega el ticket con el tiempo esperado de espera, el número en la fila."
+    },
+    {
+        "prj_id": 8,
+        "name": "simulación de línea de montaje",
+        "description": "Simulación de un ensamblaje que consta de un conjunto de estaciones de trabajo, cada una de las cuales contiene un conjunto de artículos en existencia, que son específicos de la estación. Un gerente de línea mueve los pedidos de los clientes a lo largo de la línea y completa los pedidos en cada estación, según lo solicitado. Cada pedido de un cliente consta de una lista de artículos que deben surtirse. Cada estación procesa una cola de pedidos llenando el siguiente pedido en la cola si ese pedido solicita el artículo de la estación y ese artículo está en stock. El gerente de línea sigue moviendo el los pedidos de los clientes de una estación a otra hasta que se hayan procesado todos los pedidos."
+    }
+]
