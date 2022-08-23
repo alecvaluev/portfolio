@@ -16,8 +16,9 @@ import EducationCard from "./EducationCard";
 import LinksBar from "./LinksBar";
 //import React UI materials, icons, images
 import { TextField, Button } from "@mui/material";
+//import data
 import photo from '../images/photoshop.jpg';
-import { programming_languages, web_technologies, databases} from '../data/constants';
+import { screenMode, programming_languages, web_technologies, databases} from '../data/constants';
 
 
 export default function Page({headerOpen}) {
@@ -41,7 +42,7 @@ export default function Page({headerOpen}) {
   }
   return (
     language && 
-    <div className={`${darkMode? 'bg-slate-900 text-white':'bg-white'}`}>
+    <div className={`${darkMode? `${screenMode.dark.bg} ${screenMode.dark.text}` :screenMode.light.bg}`}>
       <Header headerOpen={headerOpen}/> 
       
       <div>
@@ -56,10 +57,10 @@ export default function Page({headerOpen}) {
               </a>
             </div>
            
-           <div className="rounded-xl bg-blue-500 -rotate-3 h-[250px] w-[200px] my-10">
+           <div className={`rounded-xl ${screenMode.highlight.bg} -rotate-3 h-[250px] w-[200px] my-10`}>
             <div className="rounded-xl overflow-hidden rotate-10 h-[250px]">
                 <img src={photo}
-                    alt='Aleksandr Valuev'
+                    alt={`${language.full_name} - ${language.job_position}`}
                     className='w-[200px]'
                       />
               </div>
