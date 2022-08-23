@@ -1,11 +1,15 @@
+//import React and Redux
 import React, { useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { selectCurrentCode } from '../features/langCode/langCodeSlice';
 import { selectLangCodes } from '../features/language/languageSlice';
 import { selectDarkMode, toggleDarkMode } from '../features/darkMode/darkModeSlice';
-import { FiSun, FiMoon } from 'react-icons/fi';
 import { setLangCode } from '../features/langCode/langCodeSlice';
+//import icons
+import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
+import { FiSun, FiMoon } from 'react-icons/fi';
+//import constants
+import { screenMode } from '../data/constants';
 
 export default function LinksBar() {
     const dispatch = useDispatch();
@@ -26,7 +30,7 @@ export default function LinksBar() {
     useEffect(() => {}, [darkMode]);
 
     return (
-        <div className={`fixed right-4 bottom-7 text-4xl text-blue-500 border ${darkMode? 'bg-gray-700 border-gray-700': 'bg-gray-200'} rounded-2xl p-3 flex flex-col gap-4`}
+        <div className={`fixed right-4 bottom-7 text-4xl ${screenMode.highlight.text} border ${darkMode? `${screenMode.dark.sidebar} ${screenMode.dark.border}`: screenMode.light.sidebar} rounded-2xl p-3 flex flex-col gap-4`}
              style={{zIndex: 9999}}>
             <div className='flex flex-col gap-2'>
                 <a href='https://github.com/alecvaluev'><AiOutlineGithub /></a>
@@ -40,15 +44,15 @@ export default function LinksBar() {
                     }
                 </div>
                 <div onClick={toggleLangOpen}>
-                    <div className='hover:text-blue-500 pointer underline'
+                    <div className={`hover:${screenMode.highlight.text} pointer underline`}
                         >{currLangCode}
                     </div>
                     <div>
-                        <div className={`flex absolute right-16 bottom-0 border rounded-xl pointer ${darkMode? 'bg-gray-700 border-gray-700': 'bg-gray-200'}`}
+                        <div className={`flex absolute right-16 bottom-0 border rounded-xl pointer ${darkMode? `${screenMode.dark.sidebar} ${screenMode.dark.border}`: screenMode.light.sidebar}`}
                             >
                             {langOpen && langCodes.map((code, idx) => (
                             <div key={idx}
-                                className='pointer py-2 px-4 rounded-xl hover:text-blue-500 hover:bg-gray-300' 
+                                className={`pointer py-2 px-4 rounded-xl hover:${screenMode.highlight.text} hover:bg-gray-300`} 
                                 onClick={() => setNewLangCode(code)}>
                                 {code}
                             </div>
