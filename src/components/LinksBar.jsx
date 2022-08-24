@@ -38,7 +38,8 @@ export default function LinksBar() {
             </div>
 
             <div>
-                <div onClick={changeDarkMode}>
+                <div onClick={changeDarkMode}
+                     className='pointer'>
                     {
                         !darkMode? <FiMoon/> : <FiSun/>
                     }
