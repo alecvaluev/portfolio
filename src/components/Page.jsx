@@ -16,6 +16,7 @@ import EducationCard from "./EducationCard";
 import LinksBar from "./LinksBar";
 //import React UI materials, icons, images
 import { TextField, Button } from "@mui/material";
+import { styled } from '@mui/material/styles';
 //import data
 import photo from '../images/photoshop.jpg';
 import { screenMode, programming_languages, web_technologies, databases} from '../data/constants';
@@ -40,6 +41,26 @@ export default function Page({headerOpen}) {
           console.log(error.text);
       });
   }
+  const inputStyle = darkMode && {
+    '& label':{
+      color: 'white'
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'white',
+        color: 'white'
+      },
+      '&:hover fieldset': {
+        borderColor: 'blue',
+      },
+    },
+    '& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input' : {
+      color: 'white'
+    },
+    
+  }
+  const InputField = styled(TextField)(inputStyle);
+
   return (
     language && 
     <div className={`${darkMode? `${screenMode.dark.bg} ${screenMode.dark.text}` :screenMode.light.bg}`}>
@@ -125,11 +146,11 @@ export default function Page({headerOpen}) {
               <div className="md:w-[40%]">
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-3'>
 
-                  <TextField id="name" name="name" variant="outlined" label={ language.contact_fullname_label} required/>
-                  <TextField id="email" name="email" variant="outlined" label={ language.headline_email} required/>
-                  <TextField id="message" name="message" variant="outlined" label={ language.contact_msg_label} rows={4} multiline required/>
+                  <InputField id="name" name="name" variant="outlined" label={ language.contact_fullname_label} required/>
+                  <InputField id="email" name="email" variant="outlined" label={ language.headline_email} required/>
+                  <InputField id="message" name="message" variant="outlined" label={ language.contact_msg_label} rows={4} multiline required/>
                   <div className="font-bold">
-                    <Button variant="contained" type="submit" >{ language.contact_btn_label}</Button>
+                    <Button variant="contained" type="submit">{ language.contact_btn_label}</Button>
                   </div>
                 </form>
               </div>
