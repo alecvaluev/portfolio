@@ -44,7 +44,7 @@ export default function LinksBar() {
                     }
                 </div>
                 <div onClick={toggleLangOpen}>
-                    <div className={`hover:${screenMode.highlight.text} pointer underline`}
+                    <div className={`${screenMode.highlight.hover.text} pointer underline`}
                         >{currLangCode}
                     </div>
                     <div>
@@ -52,7 +52,7 @@ export default function LinksBar() {
                             >
                             {langOpen && langCodes.map((code, idx) => (
                             <div key={idx}
-                                className={`pointer py-2 px-4 rounded-xl hover:${screenMode.highlight.text} hover:bg-gray-300`} 
+                                className={`pointer py-2 px-4 rounded-xl ${screenMode.highlight.hover.text} hover:bg-gray-300`} 
                                 onClick={() => setNewLangCode(code)}>
                                 {code}
                             </div>
