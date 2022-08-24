@@ -11,7 +11,7 @@ export const screenMode = {
         bg: 'bg-slate-900',
         sidebar: 'bg-gray-700',
         text: 'text-white',
-        border: 'border-gray-700'
+        border: 'border-slate-900'
     },
     highlight: {
         bg: 'bg-blue-500',
