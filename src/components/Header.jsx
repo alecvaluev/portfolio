@@ -7,7 +7,7 @@ import { ImCancelCircle } from 'react-icons/im';
 import { selectDarkMode } from '../features/darkMode/darkModeSlice';
 import { HiOutlineDocumentDownload } from 'react-icons/hi';
 //import data
-import resume  from '../data/resume.pdf';
+import resume  from '../data/AleksandrValuevResume.pdf';
 import { screenMode } from '../data/constants';
 
 export default function Header({headerOpen}) {
