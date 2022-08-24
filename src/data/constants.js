@@ -22,7 +22,9 @@ export const screenMode = {
             text: 'hover:text-blue-500',
             border: 'hover:border-blue-500'
         },
-        md_bg : 'md:bg-blue-500'
+        md: {
+            bg : 'md:bg-blue-500'
+        }
     }
 }
 
