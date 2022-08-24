@@ -28,6 +28,6 @@ export const screenMode = {
     }
 }
 
-export const programming_languages = ['C', 'C++', 'Python'];
+export const programming_languages = ['C', 'C++', 'Python', 'Java'];
 export const web_technologies = ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'NodeJs', 'ReactJs', 'ReduxJs', 'NextJs', 'Bootstrap', 'Tailwind CSS'];
 export const databases = ['MongoDB', 'Oracle','Microsoft Server'];
