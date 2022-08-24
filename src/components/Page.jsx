@@ -26,8 +26,6 @@ export default function Page({headerOpen}) {
   const language = useSelector(selectLanguage);
   const projects = useSelector(selectProjects);
   const darkMode = useSelector(selectDarkMode);
-
-  useEffect(() => {}, [language])
   const form = useRef();
   
   const sendEmail = (e) => {
@@ -41,6 +39,7 @@ export default function Page({headerOpen}) {
           console.log(error.text);
       });
   }
+
   const inputStyle = darkMode && {
     '& label':{
       color: 'white'
@@ -54,12 +53,17 @@ export default function Page({headerOpen}) {
         borderColor: 'blue',
       },
     },
-    '& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input' : {
+    '& .css-1x5jdmq' : {
       color: 'white'
     },
+    '& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input': {
+      color: 'white'
+    }
     
   }
   const InputField = styled(TextField)(inputStyle);
+
+  useEffect(() => {}, [language])
 
   return (
     language && 
