@@ -59,7 +59,7 @@ export default function Page({headerOpen}) {
     '& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input': {
       color: 'white'
     },
-    '& .css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input': {
+    '& .css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input & .css-u36398': {
       color: 'white'
     }
     
