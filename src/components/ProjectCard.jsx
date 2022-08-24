@@ -23,7 +23,7 @@ export default function ProjectCard({name, description, image, github, website, 
                         {name}
                     </div>
                     <div className='rounded overflow-hidden'>
-                        <div className={`${image && `${screenMode.highlight.md_bg}`} max-h-40 p-5`}>
+                        <div className={`${image && `${screenMode.highlight.md.bg}`} max-h-40 p-5`}>
                             <p className='text-ellipsis overflow-hidden'>{description}</p>
                         </div>
                     </div>
