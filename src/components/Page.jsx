@@ -56,11 +56,16 @@ export default function Page({headerOpen}) {
     '& .css-1x5jdmq' : {
       color: 'white'
     },
+    '& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input': {
+      color: 'white'
+    },
+    '& .css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input': {
+      color: 'white'
+    },
     '& .css-1hof3tc':{
       color: 'white'
     }
   }
-  const InputField = styled(TextField)(inputStyle);
 
   useEffect(() => {}, [language])
 
@@ -149,9 +154,9 @@ export default function Page({headerOpen}) {
               <div className="md:w-[40%]">
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-3'>
 
-                  <InputField id="name" name="name" variant="outlined" label={ language.contact_fullname_label} required/>
-                  <InputField id="email" name="email" variant="outlined" label={ language.headline_email} required/>
-                  <InputField id="message" name="message" variant="outlined" label={ language.contact_msg_label} rows={4} multiline required/>
+                  <TextField id="name" name="name" variant="outlined" label={ language.contact_fullname_label} sx={inputStyle} required/>
+                  <TextField id="email" name="email" variant="outlined" label={ language.headline_email} sx={inputStyle} required/>
+                  <TextField id="message" name="message" variant="outlined" label={ language.contact_msg_label} rows={4} multiline sx={inputStyle} required/>
                   <div className="font-bold">
                     <Button variant="contained" type="submit">{ language.contact_btn_label}</Button>
                   </div>
