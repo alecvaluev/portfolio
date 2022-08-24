@@ -15,7 +15,7 @@ export default function Header({headerOpen}) {
     const language = useSelector(selectLanguage);
     const darkMode = useSelector(selectDarkMode);
 
-    const hoverStyle = `hover:${screenMode.highlight.text} pointer`;
+    const hoverStyle = `${screenMode.highlight.hover.text} pointer`;
 
     const changeShowHeader = () =>{
         setShowHearder(!showHeader);
@@ -49,7 +49,7 @@ export default function Header({headerOpen}) {
                         </ul>
                         {/* resume */}
                         <a href={resume} target='_blank' rel="noreferrer">
-                            <div className={`${hoverStyle} border-2 px-5 py-3 rounded-xl hover:${screenMode.highlight.border} flex gap-1 text-center`}>{language.headline_resume} <span className='text-3xl'><HiOutlineDocumentDownload/></span></div>
+                            <div className={`${hoverStyle} border-2 px-5 py-3 rounded-xl ${screenMode.highlight.hover.border} flex gap-1 text-center`}>{language.headline_resume} <span className='text-3xl'><HiOutlineDocumentDownload/></span></div>
                         </a>
                     </div>
                 </div>
