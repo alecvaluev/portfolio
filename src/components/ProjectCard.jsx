@@ -34,10 +34,10 @@ export default function ProjectCard({name, description, image, github, website, 
                     </div>
                     <div className={`flex flex-wrap justify-around ${image && 'md:justify-start'} font-semibold m-3`}>
                         {
-                            github && <a href={github} className={`hover:${screenMode.highlight.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border hover:${screenMode.highlight.border} flex gap-2`}><span className='text-2xl'><AiOutlineGithub/></span> GitHub</a>
+                            github && <a href={github} className={`${screenMode.highlight.hover.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border ${screenMode.highlight.hover.border} flex gap-2`}><span className='text-2xl'><AiOutlineGithub/></span> GitHub</a>
                         }
                         {
-                            website && <a href={website} className={`hover:${screenMode.highlight.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border hover:${screenMode.highlight.border} flex gap-2`}><span className='text-2xl'><FaExternalLinkAlt/></span> Web App</a>
+                            website && <a href={website} className={`${screenMode.highlight.hover.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border ${screenMode.highlight.hover.border} flex gap-2`}><span className='text-2xl'><FaExternalLinkAlt/></span> Web App</a>
                         }                        
                     </div> 
                 </div>
