@@ -17,7 +17,11 @@ export const screenMode = {
         bg: 'bg-blue-500',
         text: 'text-blue-500',
         border: 'border-blue-500',
-        shadow: 'shadow-blue-500/50'
+        shadow: 'shadow-blue-500/50',
+        hover: {
+            text: 'hover:text-blue-500',
+            border: 'hover:border-blue-500'
+        }
     }
 }
 
