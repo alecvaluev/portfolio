@@ -18,7 +18,7 @@ export default function ProjectCard({prj}) {
     const { name, description, video, github, website, tools, completed } = prj;
 
     return (
-        <div className={`w-full ${!video && 'md:w-[35%]'} flex`}>
+        <div className={`w-full ${!video && 'md:w-[40%]'} flex`}>
             <div className={`w-[100%] md:border-none ${screenMode.highlight.shadow} ${video ? 'border-t md:w-[50%] md:shadow-none': ' m-2 p-2 md:rounded-xl md:shadow-lg border-t flex justify-between place-items-center'}`}
                  style={{zIndex: 1000}}>
 
