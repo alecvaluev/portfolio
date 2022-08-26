@@ -9,9 +9,12 @@ import { AiOutlineGithub, AiOutlineFolder } from 'react-icons/ai';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 //import constants
 import { screenMode } from '../data/constants';
+import { selectLanguage } from '../features/language/languageSlice';
 
 export default function ProjectCard({prj}) {
     const darkMode = useSelector(selectDarkMode);
+    const language = useSelector(selectLanguage);
+
     const { name, description, video, github, website, tools, completed } = prj;
     return (
         <div className={`${video ? 'w-full': 'md:w-[33%]'} flex`}>
@@ -22,7 +25,7 @@ export default function ProjectCard({prj}) {
                         <span className='hidden md:block text-4xl'><AiOutlineFolder /></span>
                         {name}
                     </div>
-                    <div>Completed {completed}</div>
+                    <div><span className='capitalize'>{language.completed}</span> {completed}</div>
                     {
                         video && (
                             <>
