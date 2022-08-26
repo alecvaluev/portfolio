@@ -118,7 +118,7 @@ export default function Page({headerOpen}) {
             {/* title */}
             <Title title={ language.skills_title} subtitle={ language.skills_subtitle} />
             {/* content */}
-            <div className="flex flex-col md:flex-row sm:place-items-center">
+            <div className="flex flex-col md:flex-row place-items-center md:place-items-stretch">
                 <SkillCard name={language.skill_section_lang} list={programming_languages}/>
                 <SkillCard name={language.skill_section_web} list={web_technologies}/>
                 <SkillCard name={language.skill_section_database} list={databases}/>
