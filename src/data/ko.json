@@ -33,5 +33,8 @@
   "contact_subtitle": "문자를 보내서 이야기합시다",
   "contact_fullname_label": "성명",
   "contact_msg_label": "메시지",
-  "contact_btn_label": "메시지 보내기"
+  "contact_btn_label": "메시지 보내기",
+  "completed": "완료",
+  "other_prj": "다른 프로젝트",
+  "built_with": "함께 빌드"
 }
