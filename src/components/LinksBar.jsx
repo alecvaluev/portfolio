@@ -5,6 +5,8 @@ import { selectCurrentCode } from '../features/langCode/langCodeSlice';
 import { selectLangCodes } from '../features/language/languageSlice';
 import { selectDarkMode, toggleDarkMode } from '../features/darkMode/darkModeSlice';
 import { setLangCode } from '../features/langCode/langCodeSlice';
+//import others
+import ReactAnime from 'react-animejs';
 //import icons
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FiSun, FiMoon } from 'react-icons/fi';
@@ -17,6 +19,7 @@ export default function LinksBar() {
     const currLangCode = useSelector(selectCurrentCode);
     const langCodes = useSelector(selectLangCodes);
     const darkMode = useSelector(selectDarkMode);
+    const { Anime } = ReactAnime;
     
     const setNewLangCode = (code) => {
         dispatch(setLangCode(code));
@@ -30,38 +33,51 @@ export default function LinksBar() {
     useEffect(() => {}, [darkMode]);
 
     return (
-        <div className={`fixed right-4 bottom-7 text-4xl ${screenMode.highlight.text} border ${darkMode? `${screenMode.dark.sidebar} ${screenMode.dark.border}`: screenMode.light.sidebar} rounded-2xl p-3 flex flex-col gap-4`}
-             style={{zIndex: 9999}}>
-            <div className='flex flex-col gap-2'>
-                <a href='https://github.com/alecvaluev'><AiOutlineGithub /></a>
-                <a href='https://www.linkedin.com/in/aleksandr-valuev-7b668b238/'><AiFillLinkedin /></a>
-            </div>
-
-            <div>
-                <div onClick={changeDarkMode}
-                     className='pointer'>
-                    {
-                        !darkMode? <FiMoon/> : <FiSun/>
-                    }
+        <Anime initial={[
+            {
+              targets: '#linkbar',
+              opacity: 1,
+              translateX: 0,
+              easing: "easeInOutQuad",
+              duration: 2000,
+              delay: 2500
+            }
+            ]}>
+            <div id='linkbar'
+                className={`fixed right-4 bottom-7 text-4xl ${screenMode.highlight.text} border ${darkMode? `${screenMode.dark.sidebar} ${screenMode.dark.border}`: screenMode.light.sidebar} rounded-2xl p-3 flex flex-col gap-4`}
+                style={{opacity: 0, transform: 'translateX(50px)',zIndex: 9999}}
+                >
+                <div className='flex flex-col gap-2'>
+                    <a href='https://github.com/alecvaluev'><AiOutlineGithub /></a>
+                    <a href='https://www.linkedin.com/in/aleksandr-valuev-7b668b238/'><AiFillLinkedin /></a>
                 </div>
-                <div onClick={toggleLangOpen}>
-                    <div className={`${screenMode.highlight.hover.text} pointer underline`}
-                        >{currLangCode}
+
+                <div>
+                    <div onClick={changeDarkMode}
+                        className='pointer'>
+                        {
+                            !darkMode? <FiMoon/> : <FiSun/>
+                        }
                     </div>
-                    <div>
-                        <div className={`flex absolute right-16 bottom-0 border rounded-xl pointer ${darkMode? `${screenMode.dark.sidebar} ${screenMode.dark.border}`: screenMode.light.sidebar}`}
-                            >
-                            {langOpen && langCodes.map((code, idx) => (
-                            <div key={idx}
-                                className={`pointer py-2 px-4 rounded-xl ${screenMode.highlight.hover.text} hover:bg-gray-300`} 
-                                onClick={() => setNewLangCode(code)}>
-                                {code}
+                    <div onClick={toggleLangOpen}>
+                        <div className={`${screenMode.highlight.hover.text} pointer underline`}
+                            >{currLangCode}
+                        </div>
+                        <div>
+                            <div className={`flex absolute right-16 bottom-0 border rounded-xl pointer ${darkMode? `${screenMode.dark.sidebar} ${screenMode.dark.border}`: screenMode.light.sidebar}`}
+                                >
+                                {langOpen && langCodes.map((code, idx) => (
+                                <div key={idx}
+                                    className={`pointer py-2 px-4 rounded-xl ${screenMode.highlight.hover.text} hover:bg-gray-300`} 
+                                    onClick={() => setNewLangCode(code)}>
+                                    {code}
+                                </div>
+                                ))}
                             </div>
-                            ))}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Anime>    
     )
 }
