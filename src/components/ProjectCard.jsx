@@ -22,15 +22,15 @@ export default function ProjectCard({prj}) {
             <div className={` ${screenMode.highlight.shadow} ${video ? 'border-t md:border-none md:w-[50%] md:shadow-none': 'rounded-xl m-2 shadow-lg'}`}
                  style={{zIndex: 1000}}>
                 <div>
-                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-5xl mt-8 uppercase`}>
+                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-5xl mt-10 uppercase`}>
                         <span className='hidden md:block text-4xl'><AiOutlineFolder /></span>
                         {name}
                     </div>
-                    <div className='my-3'><span className='capitalize'>{language.completed}</span> {completed}</div>
+                    <div className='my-5'><span className='capitalize'>{language.completed}</span> {completed}</div>
                     {
                         video && (
                             <>
-                                <div className='md:hidden my-8'>
+                                <div className='md:hidden my-10'>
                                     <video src={video}
                                         alt=''
                                         className='w-full'
@@ -51,10 +51,10 @@ export default function ProjectCard({prj}) {
                     
                 </div>
                 <div>
-                    <div className={`py-6 inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
+                    <div className={`py-8 inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
                         <TextHighlight name={'Built with'} text={tools.toString().replaceAll(',', '  ')}/>
                     </div>
-                    <div className={`flex flex-wrap justify-around ${video && 'md:justify-start'} font-semibold mx-3 my-8`}>
+                    <div className={`flex flex-wrap justify-around ${video && 'md:justify-start'} font-semibold mx-3 my-10`}>
                         {
                             github && <a href={github} className={`${screenMode.highlight.hover.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border ${screenMode.highlight.hover.border} flex gap-2`}><span className='text-2xl'><AiOutlineGithub/></span> GitHub</a>
                         }
