@@ -19,8 +19,10 @@ export default function ProjectCard({prj}) {
 
     return (
         <div className={`w-full ${!video && 'md:w-[35%]'} flex`}>
-            <div className={`w-[100%] ${screenMode.highlight.shadow} ${video ? 'border-t md:border-none md:w-[50%] md:shadow-none': 'rounded-xl m-2 shadow-lg p-3'}`}
+            <div className={`w-[100%] md:border-none ${screenMode.highlight.shadow} ${video ? 'border-t md:w-[50%] md:shadow-none': ' m-2 p-2 md:rounded-xl md:shadow-lg border-t flex justify-between place-items-center'}`}
                  style={{zIndex: 1000}}>
+
+                 {/* name, vid, desc */}   
                 <div>
                     <div className={`flex gap-3 ${video ? 'font-bold text-5xl mt-8' : 'text-2xl'} ${screenMode.highlight.text} uppercase`}>
                         <span className='hidden md:block text-4xl'><AiOutlineFolder /></span>
@@ -49,20 +51,31 @@ export default function ProjectCard({prj}) {
                         )
                     }
                     
-                </div>
-                <div>
+
                     <div className={`${video ? 'py-6' : 'py-2'} inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
-                        <TextHighlight name={'Built with'} text={tools.toString().replaceAll(',', '  ')}/>
+                        <TextHighlight name={video && 'Built with'} text={tools.toString().replaceAll(',', '  ')}/>
                     </div>
-                    <div className={`flex flex-wrap justify-around ${video ? 'md:justify-start md:my-4': 'md:my-0'} font-semibold mx-3 my-8`}>
-                        {
-                            github && <a href={github} className={`${screenMode.highlight.hover.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border ${screenMode.highlight.hover.border} flex gap-2`}><span className='text-2xl'><AiOutlineGithub/></span> <span className=''>GitHub</span></a>
-                        }
-                        {
-                            website && <a href={website} className={`${screenMode.highlight.hover.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border ${screenMode.highlight.hover.border} flex gap-2`}><span className='text-2xl'><FaExternalLinkAlt/></span> Web App</a>
-                        }                        
-                    </div> 
                 </div>
+                <div className={`flex flex-wrap justify-around ${video ? 'md:justify-start md:my-4': 'md:my-0'} font-semibold mx-3 my-8`}>
+                    {
+                        github && 
+                            <a href={github} 
+                                className={`${screenMode.highlight.hover.text} ${darkMode ? screenMode.dark.border: screenMode.light.border} ${screenMode.highlight.hover.border} border rounded p-3 hover:border  flex gap-2`}
+                                >
+                                    <span className='text-2xl'><AiOutlineGithub/></span> 
+                                    <span className={`${!video && 'hidden'}`}>GitHub</span>
+                            </a>
+                    }
+                    {
+                        website && 
+                            <a href={website} 
+                                className={`${screenMode.highlight.hover.text} border ${darkMode ? screenMode.dark.border: screenMode.light.border} rounded p-3 hover:border ${screenMode.highlight.hover.border} flex gap-2`}
+                                >
+                                    <span className='text-2xl'><FaExternalLinkAlt/></span> 
+                                    <span className={`${!video && 'hidden'}`}>Web App</span>
+                            </a>
+                    }                        
+                </div> 
             </div>
             {
                 video && (
