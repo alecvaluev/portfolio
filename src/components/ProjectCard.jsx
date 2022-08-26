@@ -53,7 +53,7 @@ export default function ProjectCard({prj}) {
                     
 
                     <div className={`${video ? 'py-6' : 'py-2'} inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
-                        <TextHighlight name={video && 'Built with'} text={tools.toString().replaceAll(',', '  ')}/>
+                        <TextHighlight name={video && language.built_with} text={tools.toString().replaceAll(',', '  ')}/>
                     </div>
                 </div>
                 <div className={`flex flex-wrap justify-around ${video ? 'md:justify-start md:my-4': 'md:my-0'} font-semibold mx-3 my-8`}>
