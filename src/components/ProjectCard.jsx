@@ -10,32 +10,45 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 //import constants
 import { screenMode } from '../data/constants';
 
-export default function ProjectCard({name, description, video, github, website, tools}) {
+export default function ProjectCard({prj}) {
     const darkMode = useSelector(selectDarkMode);
-    
+    const { name, description, video, github, website, tools, completed } = prj;
     return (
-        <div className={`${video ? 'md:w-full': 'md:w-[30%]'} flex`}>
-            <div className={`rounded-xl m-2 shadow-lg ${screenMode.highlight.shadow} ${video && 'md:w-[50%] md:shadow-none'}`}
+        <div className={`${video ? 'w-full': 'md:w-[33%]'} flex`}>
+            <div className={` ${screenMode.highlight.shadow} ${video ? 'md:w-[50%] md:shadow-none': 'rounded-xl m-2 shadow-lg'}`}
                  style={{zIndex: 1000}}>
                 <div className ='p-5'>
                     <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-2xl my-3 capitalize w-[25vw]`}>
-                        <span className='text-4xl'><AiOutlineFolder /></span>
+                        <span className='hidden md:block text-4xl'><AiOutlineFolder /></span>
                         {name}
                     </div>
+                    <div>Completed {completed}</div>
                     {
                         video && (
-                            <div className='rounded overflow-hidden'>
-                                <div className={`${video && `${screenMode.highlight.md.bg}`} max-h-40 p-5`}>
-                                    <p className='text-ellipsis overflow-hidden'>{description}</p>
+                            <>
+                                <div className='md:hidden my-5'>
+                                    <video src={video}
+                                        alt=''
+                                        className='w-full'
+                                        style={{objectFit: 'cover'}}
+                                        loop
+                                        autoPlay
+                                        muted
+                                        />
                                 </div>
-                            </div>
+                                <div className='rounded'>
+                                    <div className={`${video && `${screenMode.highlight.md.bg}`} px-3`}>
+                                        <p>{description}</p>
+                                    </div>
+                                </div>
+                            </>
                         )
                     }
                     
                 </div>
                 <div className='px-5'>
-                    <div className={`py-3 border-t-4 border-b-4 inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
-                        <TextHighlight name={'Built with'} text={tools.toString().replaceAll(',', '  ')} />
+                    <div className={`py-3 inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
+                        <TextHighlight name={'Built with'} text={tools.toString().replaceAll(',', '  ')}/>
                     </div>
                     <div className={`flex flex-wrap justify-around ${video && 'md:justify-start'} font-semibold m-3`}>
                         {
