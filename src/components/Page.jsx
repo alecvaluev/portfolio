@@ -75,7 +75,7 @@ export default function Page({headerOpen}) {
       <Header headerOpen={headerOpen}/> 
       
       <div>
-        <div className="p-2 md:pt-44 md:px-40 xl:px-72">
+        <div className="p-3 md:pt-44 md:px-40 xl:px-72">
 
           <div className="flex flex-col md:flex-row items-center mt-10">
             <div className="w-[70%]">
