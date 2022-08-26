@@ -131,13 +131,23 @@ export default function Page({headerOpen}) {
             <Title title={language.project_title} subtitle={language.project_subtitle}/>
             {/* content */}
             <div className="flex flex-wrap">
-              {
-                projects && projects.map((prj, idx) => (
-                  <ProjectCard key={idx} prj={prj}/>
-                ))
-              }
-              
-            </div>
+                {
+                  projects && projects.filter(prj => prj.video)
+                                      .map((prj, idx) => (
+                                          <ProjectCard key={idx} prj={prj}/>
+                                      ))
+                }
+                
+              </div>
+              <p className="uppercase">other projects</p>
+              <div className="flex flex-wrap">
+                {
+                  projects && projects.filter(prj => !prj.video)
+                                      .map((prj, idx) => (
+                                          <ProjectCard key={idx} prj={prj}/>
+                                      ))
+                }
+              </div>
           </div>
 
           {/* contact */}
