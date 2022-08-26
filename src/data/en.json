@@ -33,5 +33,6 @@
   "contact_subtitle": "Text me and  let's talk",
   "contact_fullname_label": "full name",
   "contact_msg_label": "message",
-  "contact_btn_label": "Send The Message"
+  "contact_btn_label": "Send The Message",
+  "completed": "completed"
 }
