@@ -133,7 +133,7 @@ export default function Page({headerOpen}) {
             <div className="flex flex-wrap">
               {
                 projects && projects.map((prj, idx) => (
-                  <ProjectCard key={idx} name={prj.name} description={prj.description} video={prj.video} github={prj.github} website={prj.website} tools={prj.tools}/>
+                  <ProjectCard key={idx} prj={prj}/>
                 ))
               }
               
