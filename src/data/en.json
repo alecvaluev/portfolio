@@ -34,5 +34,7 @@
   "contact_fullname_label": "full name",
   "contact_msg_label": "message",
   "contact_btn_label": "Send The Message",
-  "completed": "completed"
+  "completed": "completed",
+  "other_prj": "other projects",
+  "built_with": "built with"
 }
