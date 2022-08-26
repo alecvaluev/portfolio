@@ -33,5 +33,8 @@
     "contact_subtitle": "Envíame un mensaje de texto y hablemos",
     "contact_fullname_label": "nombre completo",
     "contact_msg_label": "mensaje",
-    "contact_btn_label": "Enviar el mensaje"
+    "contact_btn_label": "Enviar el mensaje",
+   "completed": "completado",
+   "other_prj": "otros proyectos",
+   "built_with": "construido con"
   }
