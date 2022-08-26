@@ -14,7 +14,7 @@ export default function ProjectCard({name, description, video, github, website, 
     const darkMode = useSelector(selectDarkMode);
     
     return (
-        <div className={`${video ? 'md:w-full': 'md:w-[33%]'} flex`}>
+        <div className={`${video ? 'md:w-full': 'md:w-[30%]'} flex`}>
             <div className={`rounded-xl m-2 shadow-lg ${screenMode.highlight.shadow} ${video && 'md:w-[50%] md:shadow-none'}`}
                  style={{zIndex: 1000}}>
                 <div className ='p-5'>
