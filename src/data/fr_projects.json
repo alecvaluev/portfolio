@@ -1,42 +1,42 @@
 [
     {
         "prj_id": 1,
-        "name": "visualizador de algoritmo de clasificación",
-        "description": "Este proyecto está diseñado para ayudar a visualizar la lógica de clasificación de varios algoritmos de clasificación y mejorar la comprensión a través de imágenes."
+        "name": "visualiseur d'algorithme de tri",
+        "description": "Ce projet est conçu pour aider à visualiser la logique de tri de divers algorithmes de tri et à améliorer la compréhension grâce à des visuels."
     },
     {
         "prj_id": 2,
-        "name": "visualizador de búsqueda de rutas",
-        "description": "Este proyecto está diseñado para ayudar a visualizar cómo varios algoritmos de búsqueda de rutas intentan encontrar la ruta más corta desde el nodo de inicio hasta el nodo de destino en el gráfico."
+        "name": "visualiseur de recherche de chemin",
+        "description": "Ce projet est conçu pour aider à visualiser comment divers algorithmes de recherche de chemin tentent de trouver le chemin le plus court entre le nœud de départ et le nœud cible dans le graphe."
     },
     {
         "prj_id": 3,
         "name": "vidtalkie",
-        "description": "La aplicación web, un clon de una de las aplicaciones más utilizadas, demuestra las funcionalidades básicas, como iniciar sesión con la autenticación de Google, páginas de perfil, cargar videos, dar me gusta a los videos, comentar, buscar y filtrar videos y cuentas."
+        "description": "L'application Web, un clone de l'une des applications les plus utilisées, présente les fonctionnalités de base telles que la connexion à l'aide de l'authentification Google, les pages de profil, le téléchargement de vidéos, les vidéos aimées, les commentaires, la recherche et le filtrage de vidéos et de comptes."
     },
     {
         "prj_id": 4,
-        "name": "gerente de tienda de comestibles",
-        "description": "La aplicación es una simulación del gerente de una tienda de comestibles. Carga datos del archivo o ingreso manual y verifica si los datos son válidos y están dentro del rango de números válidos, si no es necesario ingresarlos manualmente. El programa lee el id del producto y la cantidad para agregarlos al carrito de compra actual. Después de seleccionar los artículos, el programa imprime el resumen de la compra actual con información de impuestos y total. Cuando el programa se cierra, genera el 'Resumen al final del día', donde indica el costo total de los artículos vendidos, el número de ventas y el promedio de artículos por venta, así como un resumen de las existencias restantes y los rangos de los mejores vendedores. en cada categoría."
+        "name": "gérant de l'épicerie",
+        "description": "L'application est une simulation du gérant de l'épicerie. Elle charge les données du fichier ou de la saisie manuelle et vérifie si les données sont valides et dans la plage des nombres valides, si elles ne sont pas saisies manuellement. programme lit l'identifiant du produit et la quantité pour les ajouter au panier d'achat en cours. Une fois les articles sélectionnés, le programme imprime le récapitulatif de l'achat en cours avec les informations sur les taxes et le total. Lorsque le programme est arrêté, il génère le message 'Fin de récapitulatif du jour', où il indique le coût total des articles vendus, le nombre de ventes et le nombre moyen d'articles par vente ainsi qu'un récapitulatif du stock restant et le classement des meilleurs vendeurs dans chaque catégorie."
     },
     {
         "prj_id": 5,
-        "name": "juego de matemáticas",
-        "description": "La aplicación de juego creada con C para divertirse y desafiar sus habilidades matemáticas."
+        "name": "jeu de maths",
+        "description": "L'application de jeu conçue en C pour s'amuser et mettre à l'épreuve vos compétences en mathématiques."
     },
     {
         "prj_id": 6,
-        "name": "aplicación web de la empresa",
-        "description": "Aplicación web creada para demostrar cómo iniciar sesión en el sistema, recuperar datos actuales de empleados y departamentos, agregar, eliminar y editar los datos actuales dentro de la base de datos de la empresa."
+        "name": "application Web de l'entreprise",
+        "description": "Application Web conçue pour montrer comment se connecter au système, récupérer les données actuelles des employés et des services, ajouter, supprimer et modifier les données actuelles dans la base de données de l'entreprise."
     },
     {
         "prj_id": 7,
-        "name": "solicitud previa al juicio del hospital general",
-        "description": "Un programa para hospitales para ayudarlos a clasificar a sus pacientes. Clasifica al paciente según la necesidad de la prueba de Covid. El programa asigna el tipo de paciencia dependiendo de si se necesita la prueba de covid. Dependiendo del grupo, un el paciente tiene que ingresar los datos de un médico. Después de eso, se entrega el ticket con el tiempo esperado de espera, el número en la fila."
+        "name": "demande de mise en état d'un hôpital général",
+        "description": "Un programme pour les hôpitaux pour les aider à trier leurs patients. Il trie le patient en fonction du besoin du test Covid. Le programme attribue le type de patience selon si le test covid est nécessaire. Selon le groupe , un patient doit entrer les données d'un médecin. Après cela, le ticket est donné avec le temps d'attente prévu, le numéro dans la ligne."
     },
     {
         "prj_id": 8,
-        "name": "simulación de línea de montaje",
-        "description": "Simulación de un ensamblaje que consta de un conjunto de estaciones de trabajo, cada una de las cuales contiene un conjunto de artículos en existencia, que son específicos de la estación. Un gerente de línea mueve los pedidos de los clientes a lo largo de la línea y completa los pedidos en cada estación, según lo solicitado. Cada pedido de un cliente consta de una lista de artículos que deben surtirse. Cada estación procesa una cola de pedidos llenando el siguiente pedido en la cola si ese pedido solicita el artículo de la estación y ese artículo está en stock. El gerente de línea sigue moviendo el los pedidos de los clientes de una estación a otra hasta que se hayan procesado todos los pedidos."
+        "name": "simulation de chaîne de montage",
+        "description": "Simulation d'un ensemble constitué d'un ensemble de postes de travail contenant chacun un ensemble d'articles en stock, spécifiques à la station. Un responsable de ligne déplace les commandes des clients le long de la ligne remplissant les commandes à chaque station, au fur et à mesure demandé. Chaque commande client consiste en une liste d'articles qui doivent être remplis. Chaque station traite une file d'attente de commandes en remplissant la commande suivante dans la file d'attente si cette commande demande l'article de la station et que cet article est en stock. déplacer les commandes des clients d'un poste à l'autre jusqu'à ce que toutes les commandes aient été traitées."
     }
 ]
