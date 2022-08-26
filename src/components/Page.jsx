@@ -140,7 +140,7 @@ export default function Page({headerOpen}) {
                 
               </div>
               <p className="uppercase border-b-2 p-2 text-xl -mb-2">{language.other_prj}</p>
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap justify-center">
                 {
                   projects && projects.filter(prj => !prj.video)
                                       .map((prj, idx) => (
