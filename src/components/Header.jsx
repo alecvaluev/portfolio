@@ -22,8 +22,8 @@ export default function Header({headerOpen}) {
     }
 
     return (
-        <div className={`fixed ${darkMode? screenMode.dark.bg :screenMode.light.bg} md:bg-transparent w-full`}
-             style={{zIndex: 9999}}>
+        <div id='header' className={`fixed ${darkMode? screenMode.dark.bg :screenMode.light.bg} md:bg-transparent w-full`}
+             style={{opacity: 0, transform: 'translateX(50vw)',zIndex: 9999}}>
             {/* toggle button */}
             <div className='block md:hidden m-2 ml-4 pt-3'
                 onClick={changeShowHeader}>
