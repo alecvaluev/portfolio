@@ -139,7 +139,7 @@ export default function Page({headerOpen}) {
                 }
                 
               </div>
-              <p className="uppercase">other projects</p>
+              <p className="uppercase">{language.other_prj}</p>
               <div className="flex flex-wrap">
                 {
                   projects && projects.filter(prj => !prj.video)
