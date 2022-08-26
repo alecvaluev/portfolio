@@ -18,15 +18,20 @@ export default function ProjectCard({name, description, video, github, website, 
             <div className={`rounded-xl m-2 shadow-lg ${screenMode.highlight.shadow} ${video && 'md:w-[50%] md:shadow-none'}`}
                  style={{zIndex: 1000}}>
                 <div className ='p-5'>
-                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-2xl mb-3 capitalize`}>
+                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-2xl my-3 capitalize w-[25vw]`}>
                         <span className='text-4xl'><AiOutlineFolder /></span>
                         {name}
                     </div>
-                    <div className='rounded overflow-hidden'>
-                        <div className={`${video && `${screenMode.highlight.md.bg}`} max-h-40 p-5`}>
-                            <p className='text-ellipsis overflow-hidden'>{description}</p>
-                        </div>
-                    </div>
+                    {
+                        video && (
+                            <div className='rounded overflow-hidden'>
+                                <div className={`${video && `${screenMode.highlight.md.bg}`} max-h-40 p-5`}>
+                                    <p className='text-ellipsis overflow-hidden'>{description}</p>
+                                </div>
+                            </div>
+                        )
+                    }
+                    
                 </div>
                 <div className='px-5'>
                     <div className={`py-3 border-t-4 border-b-4 inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
@@ -44,15 +49,16 @@ export default function ProjectCard({name, description, video, github, website, 
             </div>
             {
                 video && (
-                    <div className='hidden md:flex place-items-center grayscale hover:grayscale-0 hover:ease-in-out hover:duration-300' 
+                    <div className='hidden md:flex place-items-center' 
                         style={{marginLeft: '-60px'}}
                         >
                         <video src={video}
                             alt=''
                             className='h-[250px]'
                             style={{objectFit: 'cover'}}
-                            autoplay
                             loop
+                            autoPlay
+                            muted
                          />
                     </div>
                 )
