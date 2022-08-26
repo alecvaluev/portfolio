@@ -18,15 +18,15 @@ export default function ProjectCard({prj}) {
     const { name, description, video, github, website, tools, completed } = prj;
 
     return (
-        <div className={`w-full ${!video && 'md:w-[30%] border-t'} flex`}>
-            <div className={` ${screenMode.highlight.shadow} ${video ? 'md:w-[50%] md:shadow-none': 'rounded-xl m-2 shadow-lg'}`}
+        <div className={`w-full ${!video && 'md:w-[30%]'} flex`}>
+            <div className={` ${screenMode.highlight.shadow} ${video ? 'border-t md:border-none md:w-[50%] md:shadow-none': 'rounded-xl m-2 shadow-lg'}`}
                  style={{zIndex: 1000}}>
                 <div>
-                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-4xl my-3 uppercase w-[25vw]`}>
+                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-5xl mt-5 uppercase`}>
                         <span className='hidden md:block text-4xl'><AiOutlineFolder /></span>
                         {name}
                     </div>
-                    <div><span className='capitalize'>{language.completed}</span> {completed}</div>
+                    <div className='md:my-3'><span className='capitalize'>{language.completed}</span> {completed}</div>
                     {
                         video && (
                             <>
@@ -40,8 +40,8 @@ export default function ProjectCard({prj}) {
                                         muted
                                         />
                                 </div>
-                                <div className='rounded'>
-                                    <div className={`${video && `${screenMode.highlight.md.bg}`} px-3`}>
+                                <div className='rounded overflow-hidden'>
+                                    <div className={`${video && `${screenMode.highlight.md.bg}`} md:p-3`}>
                                         <p>{description}</p>
                                     </div>
                                 </div>
