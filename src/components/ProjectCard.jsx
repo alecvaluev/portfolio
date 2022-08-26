@@ -16,6 +16,7 @@ export default function ProjectCard({prj}) {
     const language = useSelector(selectLanguage);
 
     const { name, description, video, github, website, tools, completed } = prj;
+    console.log('prj',prj)
     return (
         <div className={`${video ? 'w-full': 'md:w-[33%]'} flex`}>
             <div className={` ${screenMode.highlight.shadow} ${video ? 'md:w-[50%] md:shadow-none': 'rounded-xl m-2 shadow-lg'}`}
