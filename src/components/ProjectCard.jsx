@@ -18,11 +18,11 @@ export default function ProjectCard({prj}) {
     const { name, description, video, github, website, tools, completed } = prj;
 
     return (
-        <div className={`${video ? 'w-full': 'md:w-[33%]'} flex`}>
+        <div className={`${video ? 'w-full': 'md:w-[33%] border-t'} flex`}>
             <div className={` ${screenMode.highlight.shadow} ${video ? 'md:w-[50%] md:shadow-none': 'rounded-xl m-2 shadow-lg'}`}
                  style={{zIndex: 1000}}>
-                <div className ='p-5'>
-                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-2xl my-3 capitalize w-[25vw]`}>
+                <div>
+                    <div className={`flex gap-3 font-bold ${screenMode.highlight.text} text-2xl my-3 uppercase w-[25vw]`}>
                         <span className='hidden md:block text-4xl'><AiOutlineFolder /></span>
                         {name}
                     </div>
@@ -50,7 +50,7 @@ export default function ProjectCard({prj}) {
                     }
                     
                 </div>
-                <div className='px-5'>
+                <div>
                     <div className={`py-3 inline-block ${darkMode? screenMode.dark.bg: screenMode.light.bg}`}>
                         <TextHighlight name={'Built with'} text={tools.toString().replaceAll(',', '  ')}/>
                     </div>
