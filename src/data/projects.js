@@ -24,7 +24,7 @@ const projects = [
         video: vidtalkie_vid,
         github: 'https://github.com/alecvaluev/vidtalkie',
         website: 'https://vidtalkie.vercel.app',
-        tools: ['ReactJs', 'TypeScript', 'NextJs', 'Tailwind CSS', ''],
+        tools: ['ReactJs', 'TypeScript', 'NextJs', 'Tailwind CSS', 'google-oauth'],
         completed: 2022
     },
     {
@@ -61,6 +61,13 @@ const projects = [
         website: '',
         tools: ['C++'],
         completed: 2021
+    },
+    {
+        prj_id: 9,
+        github: 'https://github.com/alecvaluev/portfolio',
+        website: 'https://aleksandrvaluev.vercel.app/',
+        tools: ['ReactJs', 'Tailwind CSS', 'ReduxJs'],
+        completed: 2020
     },
 ]
 export default projects;
