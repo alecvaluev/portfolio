@@ -38,5 +38,10 @@
         "prj_id": 8,
         "name": "simulation de chaîne de montage",
         "description": "Simulation d'un ensemble constitué d'un ensemble de postes de travail contenant chacun un ensemble d'articles en stock, spécifiques à la station. Un responsable de ligne déplace les commandes des clients le long de la ligne remplissant les commandes à chaque station, au fur et à mesure demandé. Chaque commande client consiste en une liste d'articles qui doivent être remplis. Chaque station traite une file d'attente de commandes en remplissant la commande suivante dans la file d'attente si cette commande demande l'article de la station et que cet article est en stock. déplacer les commandes des clients d'un poste à l'autre jusqu'à ce que toutes les commandes aient été traitées."
+    },
+    {
+        "prj_id": 9,
+        "name": "portefeuille",
+        "description": ""
     }
 ]
