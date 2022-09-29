@@ -25,9 +25,15 @@ export const selectProjects = (state) => {
 
     return prjCopy.map(prj => { 
         const language = projectLanguage.find(lang => prj.prj_id === lang.prj_id);
-        if (!language) language = projectEmptyTemplate;
-        for(let key of Object.keys(language)){
+        if (!language) 
+            {
+            for(let key of Object.keys(projectEmptyTemplate)){
             prj[key] = language[key];
+            }
+        else{
+            for(let key of Object.keys(language)){
+            prj[key] = language[key];
+            }
         }
         return prj;
     })
