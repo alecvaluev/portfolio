@@ -66,8 +66,8 @@ const projects = [
         prj_id: 9,
         github: 'https://github.com/alecvaluev/portfolio',
         website: 'https://aleksandrvaluev.vercel.app/',
-        tools: ['ReactJs', 'Tailwind CSS', 'ReduxJs'],
-        completed: 2020
+        tools: ['ReactJs', 'ReduxJs', 'Tailwind CSS'],
+        completed: 2022
     }
 ]
 export default projects;
