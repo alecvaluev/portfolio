@@ -68,6 +68,6 @@ const projects = [
         website: 'https://aleksandrvaluev.vercel.app/',
         tools: ['ReactJs', 'Tailwind CSS', 'ReduxJs'],
         completed: 2020
-    },
+    }
 ]
 export default projects;
