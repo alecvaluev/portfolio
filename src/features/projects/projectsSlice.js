@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import { selectProjectsLang } from '../language/languageSlice';
 //import project data
 import projects from '../../data/projects';
-import { projectEmptyTemplate } from '../../data/consona
+import { projectEmptyTemplate } from '../../data/constants`;
+
 const options = {
     name: 'projects',
     initialState: [],
