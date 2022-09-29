@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { selectProjectsLang } from '../language/languageSlice';
 //import project data
 import projects from '../../data/projects';
-
+import { projectEmptyTemplate } from '../../data/consona
 const options = {
     name: 'projects',
     initialState: [],
@@ -24,7 +24,7 @@ export const selectProjects = (state) => {
 
     return prjCopy.map(prj => { 
         const language = projectLanguage.find(lang => prj.prj_id === lang.prj_id);
-        console.log(language);
+        if (language) language = projectEmptyTemplate;
         for(let key of Object.keys(language)){
             prj[key] = language[key];
         }
