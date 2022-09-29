@@ -38,5 +38,10 @@
         "prj_id": 8,
         "name": "simulación de línea de montaje",
         "description": "Simulación de un ensamblaje que consta de un conjunto de estaciones de trabajo, cada una de las cuales contiene un conjunto de artículos en existencia, que son específicos de la estación. Un gerente de línea mueve los pedidos de los clientes a lo largo de la línea y completa los pedidos en cada estación, según lo solicitado. Cada pedido de un cliente consta de una lista de artículos que deben surtirse. Cada estación procesa una cola de pedidos llenando el siguiente pedido en la cola si ese pedido solicita el artículo de la estación y ese artículo está en stock. El gerente de línea sigue moviendo el los pedidos de los clientes de una estación a otra hasta que se hayan procesado todos los pedidos."
+    },
+    {
+        "prj_id": 9,
+        "name": "cartera",
+        "description": ""
     }
 ]
