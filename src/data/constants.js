@@ -34,6 +34,6 @@ export const databases = ['MongoDB', 'Oracle','Microsoft Server'];
 
 export const projectEmptyTemplate = {
         "prj_id": 0,
-        "name": "",
-        "description": ""
+        "name": " ",
+        "description": " ",
     };
