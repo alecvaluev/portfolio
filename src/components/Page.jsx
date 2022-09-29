@@ -200,7 +200,7 @@ export default function Page({headerOpen}) {
             <div className="flex flex-wrap">
                 {
                   projects && projects.filter(prj => prj.video)
-                                      .sort((prj1, prj2) => prj1.prj_id - prj2.prj_id)
+                                      .sort((prj1, prj2) => prj1.completed - prj2.completed)
                                       .map((prj, idx) => (
                                           <ProjectCard key={idx} prj={prj}/>
                                       ))
