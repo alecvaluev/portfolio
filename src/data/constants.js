@@ -36,4 +36,4 @@ export const projectEmptyTemplate = {
         "prj_id": 0,
         "name": "",
         "description": ""
-    },
+    };
