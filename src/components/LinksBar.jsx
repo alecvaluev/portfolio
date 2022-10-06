@@ -11,7 +11,7 @@ import ReactAnime from 'react-animejs';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FiSun, FiMoon } from 'react-icons/fi';
 //import constants
-import { screenMode, gitHubUrl, linkedinUrl } from '../data/constants';
+import { screenMode, gitHubUrl, linkedInUrl } from '../data/constants';
 
 export default function LinksBar() {
     const dispatch = useDispatch();
@@ -49,7 +49,7 @@ export default function LinksBar() {
                 >
                 <div className='flex flex-col gap-2'>
                     <a href={gitHubUrl}><AiOutlineGithub /></a>
-                    <a href={linkedinUrl}><AiFillLinkedin /></a>
+                    <a href={linkedInUrl}><AiFillLinkedin /></a>
                 </div>
 
                 <div>
