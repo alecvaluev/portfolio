@@ -37,3 +37,6 @@ export const projectEmptyTemplate = {
         "name": "",
         "description": ""
     };
+
+export const linkedInUrl = 'https://www.linkedin.com/in/aleks-valuev/';
+export const gitHubUrl = 'https://github.com/alecvaluev';
