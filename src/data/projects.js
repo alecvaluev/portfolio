@@ -14,8 +14,8 @@ const projects = [
     {
         prj_id: 2,
         video: path_vid,
-        github: 'https://github.com/alecvaluev/path-search-visualiser',
-        website: 'https://path-finding-visualiser-app.herokuapp.com/',
+        github: 'https://github.com/alecvaluev/path-search-visualizer',
+        website: 'https://path-search-visualizer.vercel.app/',
         tools: ['ReactJs', 'ReduxJs', 'Bootstrap5'],
         completed: 2022
     },
