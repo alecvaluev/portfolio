@@ -45,7 +45,7 @@ export default function Header({headerOpen}) {
                             <a href='#education'><li className={hoverStyle}>{language.headline_education}</li></a>
                             <a href='#skills'><li className={hoverStyle}>{language.headline_skills}</li></a>
                             <a href='#projects'><li className={hoverStyle}>{language.headline_projects}</li></a>
-                            <a href='#contact'><li className={hoverStyle}>{language.headline_contact}</li></a>
+                            <a href='#contact'><li className={hoverStyle}>{language.headline_contact}***</li></a>
                         </ul>
                         {/* resume */}
                         <a href={resume} target='_blank' rel="noreferrer">

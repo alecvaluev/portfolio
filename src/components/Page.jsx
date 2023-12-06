@@ -180,7 +180,6 @@ export default function Page({headerOpen}) {
             <EducationCard startDate={language.program_start} endDate={language.program_end} program={language.university_program} uni_name={language.university_name} uni_address={language.university_address} />
           </div>
 
-          {/* skills */}
           <div id='skills' className="py-20 border-y">
             {/* title */}
             <Title title={ language.skills_title} subtitle={ language.skills_subtitle} />
@@ -189,11 +188,11 @@ export default function Page({headerOpen}) {
                 <SkillCard name={language.skill_section_lang} list={programming_languages}/>
                 <SkillCard name={language.skill_section_web} list={web_technologies}/>
                 <SkillCard name={language.skill_section_database} list={databases}/>
+                <SkillCard name={language.skill_section_database} list={databases}/>
             </div>
           </div>
 
-          {/* projects */}
-          <div id='projects' className="py-20 border-y">
+          <div id='projects' className="py-18 border-y">
             {/* title */}
             <Title title={language.project_title} subtitle={language.project_subtitle}/>
             {/* content */}
