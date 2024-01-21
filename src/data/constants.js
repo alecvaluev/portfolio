@@ -28,8 +28,8 @@ export const screenMode = {
     }
 }
 
-export const programming_languages = ['C', 'C++', 'Python', 'Java'];
-export const web_technologies = ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'NodeJs', 'ReactJs', 'ReduxJs', 'Vue.js', 'NextJs', 'Bootstrap', 'Tailwind CSS'];
+export const programming_languages = ['C', 'C++', 'Python', 'Kotlin'];
+export const web_technologies = ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'NodeJs', 'ReactJs', 'ReduxJs', 'Vue.js', 'NextJs', 'Bootstrap', 'Tailwind CSS', 'MUI', 'GraphQL', 'Jest', 'Playwright'];
 export const databases = ['MongoDB', 'Oracle','Microsoft Server'];
 
 export const projectEmptyTemplate = {
