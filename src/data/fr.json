@@ -2,6 +2,7 @@
     "full_name": "Aleks Valuev",
     "job_position": "Développeur de logiciels",
     "headline_about": "à propos",
+    "headline_experience": "expérience",
     "headline_education": "éducation",
     "headline_skills": "compétences",
     "headline_projects": "projets",
@@ -38,5 +39,9 @@
     "contact_btn_label": "Envoyer le message",
     "completed": "terminé",
     "other_prj": "autres projets",
-    "built_with": "construit avec"
+    "built_with": "construit avec",
+    "experience_title": "expérience professionnelle",
+    "experience_subtitle": "parcours professionnel",
+    "work_responsibilities": "responsabilités principales",
+    "work_technologies": "technologies utilisées"
   }

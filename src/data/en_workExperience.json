@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "company": "RollCredits",
+        "location": "Los Angeles, US",
+        "period": "November 2024 – now",
+        "responsibilities": [
+            "Led development of a full Payroll Management Platform for entertainment productions, delivering end-to-end functionality with timesheets, payroll calculations, production setup, document management, and unions compliance.",
+            "Designed and implemented support for multiple employment types with signatory management, agreement tracking, and validation workflows.",
+            "Partnered with production and payroll teams to gather requirements, ensure legal and union compliance, reduce audit risk, and process safeguards across all operations.",
+            "Built the paystub and invoice communication system, including automated PDF generation, custom email/SMS configuration per profile, and safe, reliable data submission with external providers, integrating with notification systems.",
+            "Developed testing, validation, and monitoring workflows to maintain data integrity and calculation accuracy, preserving previous calculations while integrating compliance version updates, and ensuring the platform scales reliably across new data, workflows, and rules."
+        ]
+    },
+    {
+        "id": 2,
+        "company": "3RM",
+        "location": "San Francisco, US",
+        "period": "December 2023 – November 2024",
+        "responsibilities": [
+            "Developed responsive web pages using React and TypeScript and implemented features based on Figma design mockup files while presenting and reporting each stage of the development.",
+            "Designed and implemented new server endpoints for performing search and CRUD operations.",
+            "Successfully integrated third-party APIs and in-app software, ensuring smooth interoperability and extending the capabilities of the software ecosystem.",
+            "Conducted comprehensive end-to-end, unit, and integration testing using Jest and Playwright libraries.",
+            "Collaborated with the team in project development, contributing to debugging efforts, refactoring and maintenance improvements."
+        ]
+    },
+    {
+        "id": 3,
+        "company": "LaunchUp",
+        "location": "Toronto, Canada",
+        "period": "January – March 2023",
+        "responsibilities": [
+            "Developed and managed a curriculum framework for programming students, incorporating hands-on learning experiences and practical exercises focused on React, Redux, JavaScript, and other relevant technologies.",
+            "Designed and implemented a system of learning tickets to facilitate student practice and exploration of new programming concepts, fostering a deeper understanding of key principles.",
+            "Authored comprehensive Jest test suites to evaluate student implementations, ensuring correctness and functionality in accordance with project requirements."
+        ]
+    }
+]

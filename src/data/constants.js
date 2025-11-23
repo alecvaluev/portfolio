@@ -3,27 +3,32 @@ export const DEFAULT_LANG_CODE = 'en';
 export const screenMode = {
     light: {
         bg: 'bg-white',
-        sidebar: 'bg-gray-200',
-        text: 'text-dark',
-        border: 'border-white'
+        sidebar: 'bg-gray-50',
+        text: 'text-slate-900',
+        border: 'border-gray-200',
+        card: 'bg-white/80',
+        secondary: 'text-slate-600'
     },
     dark: {
-        bg: 'bg-slate-900',
-        sidebar: 'bg-gray-700',
-        text: 'text-white',
-        border: 'border-slate-900'
+        bg: 'bg-slate-950',
+        sidebar: 'bg-slate-900',
+        text: 'text-slate-100',
+        border: 'border-slate-800',
+        card: 'bg-slate-900/80',
+        secondary: 'text-slate-400'
     },
     highlight: {
-        bg: 'bg-blue-500',
-        text: 'text-blue-500',
-        border: 'border-blue-500',
-        shadow: 'shadow-blue-500/50',
+        bg: 'bg-gradient-to-r from-blue-600 to-purple-600',
+        text: 'text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600',
+        border: 'border-blue-600',
+        shadow: 'shadow-blue-600/30',
         hover: {
-            text: 'hover:text-blue-500',
-            border: 'hover:border-blue-500'
+            text: 'hover:text-blue-600',
+            border: 'hover:border-blue-600',
+            bg: 'hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600'
         },
         md: {
-            bg : 'md:bg-blue-500'
+            bg : 'md:bg-gradient-to-r md:from-blue-600 md:to-purple-600'
         }
     }
 }

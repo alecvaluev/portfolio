@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "company": "RollCredits",
+        "location": "Los Angeles, États-Unis",
+        "period": "Novembre 2024 – maintenant",
+        "responsibilities": [
+            "A dirigé le développement d'une plateforme complète de gestion de paie pour les productions de divertissement, livrant des fonctionnalités de bout en bout avec feuilles de temps, calculs de paie, configuration de production, gestion de documents et conformité syndicale.",
+            "A conçu et implémenté le support pour plusieurs types d'emploi avec gestion des signataires, suivi des accords et workflows de validation.",
+            "S'est associé avec les équipes de production et de paie pour recueillir les exigences, assurer la conformité légale et syndicale, réduire les risques d'audit, et les processus de protection dans toutes les opérations.",
+            "A construit le système de communication des bulletins de paie et factures, incluant la génération automatique de PDF, configuration email/SMS personnalisée par profil, et soumission de données sécurisée et fiable avec des fournisseurs externes, s'intégrant aux systèmes de notification.",
+            "A développé des workflows de test, validation et surveillance pour maintenir l'intégrité des données et la précision des calculs, préservant les calculs précédents tout en intégrant les mises à jour de version de conformité, et s'assurant que la plateforme s'adapte de manière fiable aux nouvelles données, workflows et règles."
+        ]
+    },
+    {
+        "id": 2,
+        "company": "3RM",
+        "location": "San Francisco, États-Unis",
+        "period": "Décembre 2023 – Novembre 2024",
+        "responsibilities": [
+            "A développé des pages web réactives en utilisant React et TypeScript et implémenté des fonctionnalités basées sur les fichiers de maquette Figma tout en présentant et rapportant chaque étape du développement.",
+            "A conçu et implémenté de nouveaux endpoints serveur pour effectuer des opérations de recherche et CRUD.",
+            "A intégré avec succès des APIs tierces et des logiciels in-app, assurant une interopérabilité fluide et étendant les capacités de l'écosystème logiciel.",
+            "A mené des tests complets de bout en bout, unitaires et d'intégration en utilisant les bibliothèques Jest et Playwright.",
+            "A collaboré avec l'équipe dans le développement de projets, contribuant aux efforts de débogage, refactorisation et améliorations de maintenance."
+        ]
+    },
+    {
+        "id": 3,
+        "company": "LaunchUp",
+        "location": "Toronto, Canada",
+        "period": "Janvier – Mars 2023",
+        "responsibilities": [
+            "A développé et géré un framework de curriculum pour les étudiants en programmation, incorporant des expériences d'apprentissage pratiques et des exercices pratiques axés sur React, Redux, JavaScript et autres technologies pertinentes.",
+            "A conçu et implémenté un système de tickets d'apprentissage pour faciliter la pratique étudiante et l'exploration de nouveaux concepts de programmation, favorisant une compréhension plus profonde des principes clés.",
+            "A rédigé des suites de tests Jest complètes pour évaluer les implémentations étudiantes, assurant la correction et la fonctionnalité conformément aux exigences du projet."
+        ]
+    }
+]

@@ -1,11 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// Load dark mode from localStorage or default to false
+const loadDarkMode = () => {
+    try {
+        const savedDarkMode = localStorage.getItem('darkMode');
+        return savedDarkMode ? JSON.parse(savedDarkMode) : false;
+    } catch (error) {
+        return false;
+    }
+};
+
 const options = {
     name: 'darkMode',
-    initialState: false,
+    initialState: loadDarkMode(),
     reducers: {
         toggleDarkMode: (state, action) => {
-            return !state;
+            const newState = !state;
+            localStorage.setItem('darkMode', JSON.stringify(newState));
+            return newState;
         }
     }
 }

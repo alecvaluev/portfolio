@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "company": "RollCredits",
+        "location": "Los Ángeles, EE.UU.",
+        "period": "Noviembre 2024 – ahora",
+        "responsibilities": [
+            "Lideró el desarrollo de una plataforma completa de gestión de nóminas para producciones de entretenimiento, entregando funcionalidad integral con hojas de tiempo, cálculos de nómina, configuración de producción, gestión de documentos y cumplimiento sindical.",
+            "Diseñó e implementó soporte para múltiples tipos de empleo con gestión de firmantes, seguimiento de acuerdos y flujos de trabajo de validación.",
+            "Se asoció con equipos de producción y nóminas para recopilar requisitos, asegurar cumplimiento legal y sindical, reducir riesgo de auditoría y procesos de salvaguarda en todas las operaciones.",
+            "Construyó el sistema de comunicación de talones de pago y facturas, incluyendo generación automática de PDF, configuración personalizada de email/SMS por perfil, y envío de datos seguro y confiable con proveedores externos, integrando con sistemas de notificación.",
+            "Desarrolló flujos de trabajo de prueba, validación y monitoreo para mantener integridad de datos y precisión de cálculos, preservando cálculos anteriores mientras integra actualizaciones de versión de cumplimiento, y asegurando que la plataforma escale confiablemente a través de nuevos datos, flujos de trabajo y reglas."
+        ]
+    },
+    {
+        "id": 2,
+        "company": "3RM",
+        "location": "San Francisco, EE.UU.",
+        "period": "Diciembre 2023 – Noviembre 2024",
+        "responsibilities": [
+            "Desarrolló páginas web responsivas usando React y TypeScript e implementó características basadas en archivos de maqueta de diseño de Figma mientras presentaba e informaba cada etapa del desarrollo.",
+            "Diseñó e implementó nuevos endpoints de servidor para realizar operaciones de búsqueda y CRUD.",
+            "Integró exitosamente APIs de terceros y software in-app, asegurando interoperabilidad fluida y extendiendo las capacidades del ecosistema de software.",
+            "Realizó pruebas integrales de extremo a extremo, unitarias e integración usando las librerías Jest y Playwright.",
+            "Colaboró con el equipo en desarrollo de proyectos, contribuyendo a esfuerzos de depuración, refactorización y mejoras de mantenimiento."
+        ]
+    },
+    {
+        "id": 3,
+        "company": "LaunchUp",
+        "location": "Toronto, Canadá",
+        "period": "Enero – Marzo 2023",
+        "responsibilities": [
+            "Desarrolló y gestionó un marco de curriculum para estudiantes de programación, incorporando experiencias de aprendizaje práctico y ejercicios prácticos enfocados en React, Redux, JavaScript y otras tecnologías relevantes.",
+            "Diseñó e implementó un sistema de tickets de aprendizaje para facilitar la práctica estudiantil y exploración de nuevos conceptos de programación, fomentando un entendimiento más profundo de principios clave.",
+            "Creó suites de prueba Jest comprehensivas para evaluar implementaciones estudiantiles, asegurando corrección y funcionalidad de acuerdo con requisitos del proyecto."
+        ]
+    }
+]

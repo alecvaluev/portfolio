@@ -5,10 +5,12 @@ import en from "../../data/en.json";
 import ko from "../../data/ko.json";
 import sp from "../../data/sp.json";
 import fr from "../../data/fr.json";
+import zh from "../../data/zh.json";
 import en_prj from '../../data/en_projects';
 import ko_prj from '../../data/ko_projects';
 import sp_prj from '../../data/sp_projects';
 import fr_prj from '../../data/fr_projects';
+import zh_prj from '../../data/zh_projects';
 
 const options = {
     name: 'language',
@@ -20,10 +22,12 @@ const options = {
                 sp: sp,
                 ko: ko,
                 fr: fr,
+                zh: zh,
                 en_prj: en_prj,
                 sp_prj: sp_prj,
                 ko_prj: ko_prj,
-                fr_prj: fr_prj
+                fr_prj: fr_prj,
+                zh_prj: zh_prj
             }
         },
     }

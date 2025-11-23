@@ -1,11 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { DEFAULT_LANG_CODE } from '../../data/constants';
 
+// Load language code from localStorage or use default
+const loadLangCode = () => {
+    try {
+        const savedLangCode = localStorage.getItem('langCode');
+        return savedLangCode || DEFAULT_LANG_CODE;
+    } catch (error) {
+        return DEFAULT_LANG_CODE;
+    }
+};
+
 const options = {
     name: 'langCode',
-    initialState: DEFAULT_LANG_CODE,
+    initialState: loadLangCode(),
     reducers: {
         setLangCode: (state, action) => {
+            localStorage.setItem('langCode', action.payload);
             return action.payload;
         }
     }

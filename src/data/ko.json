@@ -2,6 +2,7 @@
   "full_name": "Aleks Valuev",
   "job_position": "소프트웨어 개발자",
   "headline_about": "정보",
+  "headline_experience": "경험",
   "headline_education" : "교육",
   "headline_skills": "기술",
   "headline_projects": "프로젝트",
@@ -38,5 +39,9 @@
   "contact_btn_label": "메시지 보내기",
   "completed": "완료",
   "other_prj": "다른 프로젝트",
-  "built_with": "함께 빌드"
+  "built_with": "함께 빌드",
+  "experience_title": "업무 경험",
+  "experience_subtitle": "직업 여정",
+  "work_responsibilities": "주요 업무",
+  "work_technologies": "사용 기술"
 }
