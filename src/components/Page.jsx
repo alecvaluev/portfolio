@@ -181,7 +181,7 @@ export default function Page({headerOpen}) {
       </Anime>
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-purple-600/5 pointer-events-none"></div>
-        <div className="p-6 md:pt-52 md:px-16 lg:px-32 xl:px-48 2xl:px-64 max-w-7xl mx-auto relative">
+        <div className="p-6 md:pt-32 md:px-16 lg:px-32 xl:px-48 2xl:px-64 max-w-7xl mx-auto relative">
 
           <div className="flex flex-col items-center justify-center text-center mt-20 mb-32 min-h-[70vh]">
             <div className="w-full max-w-4xl">
