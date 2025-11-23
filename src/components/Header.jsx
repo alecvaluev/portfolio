@@ -7,7 +7,6 @@ import { ImCancelCircle } from 'react-icons/im';
 import { selectDarkMode } from '../features/darkMode/darkModeSlice';
 import { HiOutlineDocumentDownload } from 'react-icons/hi';
 //import data
-import resume  from '../data/AleksandrValuevResume.pdf';
 import { screenMode } from '../data/constants';
 
 export default function Header({headerOpen}) {
@@ -58,7 +57,7 @@ export default function Header({headerOpen}) {
                             <a href='#contact' className="group"><li className={`${hoverStyle} relative py-2`}>{language.headline_contact}<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span></li></a>
                         </ul>
                         {/* resume */}
-                        <a href={resume} target='_blank' rel="noreferrer">
+                        <a href="/AleksandrValuevResume.pdf" target='_blank' rel="noreferrer">
                             <div className={`group relative overflow-hidden border-2 px-5 py-3 rounded-full ${darkMode ? 'border-blue-500' : 'border-blue-600'} flex gap-2 items-center text-center transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105`}>
                                 <span className="relative z-10 transition-colors duration-300 group-hover:text-white text-sm font-semibold">{language.headline_resume}</span>
                                 <span className='relative z-10 text-xl transition-transform duration-300 group-hover:translate-x-1'><HiOutlineDocumentDownload/></span>
