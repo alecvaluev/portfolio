@@ -6,11 +6,11 @@ import ko from "../../data/ko.json";
 import sp from "../../data/sp.json";
 import fr from "../../data/fr.json";
 import zh from "../../data/zh.json";
-import en_prj from '../../data/en_projects';
-import ko_prj from '../../data/ko_projects';
-import sp_prj from '../../data/sp_projects';
-import fr_prj from '../../data/fr_projects';
-import zh_prj from '../../data/zh_projects';
+import en_prj from '../../data/en_projects.json';
+import ko_prj from '../../data/ko_projects.json';
+import sp_prj from '../../data/sp_projects.json';
+import fr_prj from '../../data/fr_projects.json';
+import zh_prj from '../../data/zh_projects.json';
 
 const options = {
     name: 'language',
@@ -40,12 +40,16 @@ export const selectLanguages = (state) => state.language;
 export const selectLangCodes = (state) => Object.keys(state.language).filter(code => !code.includes('_prj'));
 export const selectLanguage = (state) => {
     const langCode = selectCurrentCode(state);
-    return state.language[langCode]; 
+    const language = state.language[langCode];
+    // Fallback to English if language is not found or not initialized
+    return language || state.language['en'] || {}; 
 }
 export const selectProjectsLang = (state) => {
     const langCode = selectCurrentCode(state);
     const projects = langCode + '_prj';
-    return state.language[projects];
+    const projectsLang = state.language[projects];
+    // Fallback to English projects if not found
+    return projectsLang || state.language['en_prj'] || [];
 }
 
 //Exports

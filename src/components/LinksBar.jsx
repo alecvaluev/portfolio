@@ -3,15 +3,15 @@ import React, { useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectCurrentCode } from '../features/langCode/langCodeSlice';
 import { selectLangCodes } from '../features/language/languageSlice';
-import { selectDarkMode, toggleDarkMode } from '../features/darkMode/darkModeSlice';
+import { selectDarkMode, selectDarkModeMode, toggleDarkMode } from '../features/darkMode/darkModeSlice';
 import { setLangCode } from '../features/langCode/langCodeSlice';
 //import others
 import ReactAnime from 'react-animejs';
 //import icons
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi';
 //import constants
-import { screenMode, gitHubUrl, linkedInUrl } from '../data/constants';
+import { gitHubUrl, linkedInUrl } from '../data/constants';
 
 export default function LinksBar() {
     const dispatch = useDispatch();
@@ -19,6 +19,7 @@ export default function LinksBar() {
     const currLangCode = useSelector(selectCurrentCode);
     const langCodes = useSelector(selectLangCodes);
     const darkMode = useSelector(selectDarkMode);
+    const darkModeMode = useSelector(selectDarkModeMode);
     const { Anime } = ReactAnime;
     
     const setNewLangCode = (code) => {
@@ -30,6 +31,28 @@ export default function LinksBar() {
     const changeDarkMode = () => {
         dispatch(toggleDarkMode());
     }
+
+    // Get icon and label based on current mode
+    const getModeIcon = () => {
+        if (darkModeMode === 'light') {
+            return <FiSun className={darkMode ? "text-yellow-400" : "text-yellow-500"}/>;
+        } else if (darkModeMode === 'dark') {
+            return <FiMoon className={darkMode ? "text-slate-300" : "text-slate-700"}/>;
+        } else {
+            return <FiMonitor className={darkMode ? "text-blue-400" : "text-blue-500"}/>;
+        }
+    };
+
+    const getModeLabel = () => {
+        if (darkModeMode === 'light') {
+            return 'Light Mode';
+        } else if (darkModeMode === 'dark') {
+            return 'Dark Mode';
+        } else {
+            return 'Auto Mode';
+        }
+    };
+
     useEffect(() => {}, [darkMode]);
 
     return (
@@ -64,10 +87,10 @@ export default function LinksBar() {
                     <div onClick={changeDarkMode}
                         className='group relative p-2 rounded-xl hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-purple-600/10 transition-all duration-300 cursor-pointer'>
                         <div className="text-2xl group-hover:rotate-180 transition-transform duration-500">
-                            {!darkMode ? <FiMoon className="text-slate-700"/> : <FiSun className="text-yellow-400"/>}
+                            {getModeIcon()}
                         </div>
                         <span className="absolute right-full mr-2 top-1/2 -translate-y-1/2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                            {!darkMode ? 'Dark Mode' : 'Light Mode'}
+                            {getModeLabel()}
                         </span>
                     </div>
                     
