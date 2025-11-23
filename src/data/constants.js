@@ -45,3 +45,4 @@ export const projectEmptyTemplate = {
 
 export const linkedInUrl = 'https://www.linkedin.com/in/aleks-valuev/';
 export const gitHubUrl = 'https://github.com/alecvaluev';
+export const RECIPIENT_EMAIL = 'alexvaluev1220@gmail.com';

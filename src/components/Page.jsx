@@ -1,12 +1,11 @@
 //import React and Redux
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "../features/language/languageSlice";
 import { selectProjects } from '../features/projects/projectsSlice';
 import { selectWorkExperience } from '../features/workExperience/workExperienceSlice';
 import { selectDarkMode } from "../features/darkMode/darkModeSlice";
 //import others
-import emailjs from '@emailjs/browser';
 import ReactAnime from 'react-animejs';
 //import components
 import Header from "./Header";
@@ -20,8 +19,7 @@ import LinksBar from "./LinksBar";
 //import React UI materials, icons, images
 import { TextField } from "@mui/material";
 //import data
-import { screenMode, programming_languages, web_technologies, databases} from '../data/constants';
-
+import { screenMode, programming_languages, web_technologies, databases, RECIPIENT_EMAIL} from '../data/constants';
 
 export default function Page({headerOpen}) {
   const language = useSelector(selectLanguage);
@@ -30,100 +28,65 @@ export default function Page({headerOpen}) {
   const darkMode = useSelector(selectDarkMode);
   const form = useRef();
   const { Anime } = ReactAnime;
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
   const [messageType, setMessageType] = useState(''); // 'success' or 'error'
   
-  // Test function to debug EmailJS configuration
-  const testEmailJS = () => {
-    console.log('Testing EmailJS configuration...');
-    
-    const testData = {
-      name: 'Test User',
-      email: 'test@example.com',
-      message: 'This is a test message to verify EmailJS configuration.'
-    };
-    
-    emailjs.send('service_crert4i', 'template_i2o1jta', testData, {
-      publicKey: 'mbzoQn_zGnpYjyMrd'
-    })
-    .then((result) => {
-      console.log('EmailJS test successful:', result);
-      alert('EmailJS test successful! Your configuration is working.');
-    })
-    .catch((error) => {
-      console.error('EmailJS test failed:', error);
-      alert(`EmailJS test failed: ${error.message || 'Unknown error'}`);
-    });
-  };
-  
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitMessage('');
 
-    // Enhanced error logging and validation
-    console.log('Attempting to send email...');
-    
-    // Get form data for debugging
-    const formData = new FormData(form.current);
-    const emailData = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message')
-    };
-    console.log('Form data:', emailData);
-    
-    // Validate form data
-    if (!emailData.name || !emailData.email || !emailData.message) {
-      setSubmitMessage('Please fill in all required fields.');
+    // Get form data
+    if (!form.current) {
+      setSubmitMessage('Form error. Please refresh the page and try again.');
       setMessageType('error');
-      setIsSubmitting(false);
       return;
     }
     
-    emailjs.sendForm('service_crert4i', 'template_i2o1jta', form.current, {
-      publicKey: 'mbzoQn_zGnpYjyMrd'
-    })
-      .then((result) => {
-          console.log('Email sent successfully:', result);
-          setSubmitMessage('Message sent successfully! I\'ll get back to you soon.');
-          setMessageType('success');
-          form.current.reset();
-      })
-      .catch((error) => {
-          console.error('Email send failed:', error);
-          console.error('Error details:', {
-            status: error.status,
-            text: error.text,
-            message: error.message
-          });
-          
-          // More specific error messages based on error type
-          let errorMessage = 'Failed to send message. Please try again or email me directly.';
-          
-          if (error.status === 400) {
-            errorMessage = 'Invalid form data. Please check your inputs and try again.';
-          } else if (error.status === 401) {
-            errorMessage = 'Authentication failed. Please email me directly at alexvaluev1220@gmail.com';
-          } else if (error.status === 403) {
-            errorMessage = 'Service access denied. Please email me directly at alexvaluev1220@gmail.com';
-          } else if (!navigator.onLine) {
-            errorMessage = 'No internet connection. Please check your connection and try again.';
-          } else if (error.message && error.message.includes('network')) {
-            errorMessage = 'Network error. Please check your internet connection.';
-          }
-          
-          setSubmitMessage(errorMessage);
-          setMessageType('error');
-      })
-      .finally(() => {
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setSubmitMessage('');
-            setMessageType('');
-          }, 8000); // Increased timeout for longer error messages
-      });
+    const formData = new FormData(form.current);
+    const from_name = formData.get('from_name')?.trim();
+    const from_email = formData.get('from_email')?.trim();
+    const message = formData.get('message')?.trim();
+    
+    // Validate form data
+    if (!from_name || !from_email || !message) {
+      setSubmitMessage('Please fill in all required fields.');
+      setMessageType('error');
+      return;
+    }
+    
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(from_email)) {
+      setSubmitMessage('Please enter a valid email address.');
+      setMessageType('error');
+      return;
+    }
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Contact from Portfolio - ${from_name}`);
+    const body = encodeURIComponent(
+      `Name: ${from_name}\n` +
+      `Email: ${from_email}\n\n` +
+      `Message:\n${message}`
+    );
+    
+    const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    setSubmitMessage('Opening your email client... Please send the email to complete the process.');
+    setMessageType('success');
+    
+    // Reset form
+    form.current.reset();
+    
+    // Clear message after 5 seconds
+    setTimeout(() => {
+      setSubmitMessage('');
+      setMessageType('');
+    }, 5000);
   }
 
   const inputStyle = darkMode && {
@@ -152,16 +115,6 @@ export default function Page({headerOpen}) {
       color: 'white'
     }
   }
-
-  useEffect(() => {
-    // Initialize EmailJS if not already initialized
-    try {
-      emailjs.init('mbzoQn_zGnpYjyMrd');
-      console.log('EmailJS initialized successfully');
-    } catch (error) {
-      console.error('Failed to initialize EmailJS:', error);
-    }
-  }, [language])
 
   return (
     language && 
@@ -349,27 +302,20 @@ export default function Page({headerOpen}) {
                     {submitMessage}
                   </div>
                 )}
-                <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-4'>
+                 <form ref={form} onSubmit={handleSubmit} className='flex flex-col gap-4'>
 
-                  <TextField id="name" name="name" variant="outlined" label={ language.contact_fullname_label} sx={inputStyle} required/>
-                  <TextField id="email" name="email" variant="outlined" label={ language.headline_email} sx={inputStyle} required/>
+                  <TextField id="from_name" name="from_name" variant="outlined" label={ language.contact_fullname_label} sx={inputStyle} required/>
+                  <TextField id="from_email" name="from_email" type="email" variant="outlined" label={ language.headline_email} sx={inputStyle} required/>
                   <TextField id="message" name="message" variant="outlined" label={ language.contact_msg_label} rows={4} multiline sx={inputStyle} required/>
                   <div className="font-bold">
                     <button 
                       type="submit" 
-                      disabled={isSubmitting}
-                      className={`relative overflow-hidden px-8 py-4 rounded-full font-semibold transition-all duration-300 group ${
-                        isSubmitting 
-                          ? 'bg-gray-400 cursor-not-allowed' 
-                          : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105'
-                      } text-white`}
+                      className="relative overflow-hidden px-8 py-4 rounded-full font-semibold transition-all duration-300 group bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 text-white"
                     >
                       <span className="relative z-10">
-                        {isSubmitting ? 'Sending...' : language.contact_btn_label}
+                        {language.contact_btn_label}
                       </span>
-                      {!isSubmitting && (
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                      )}
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                     </button>
                   </div>
                 </form>
